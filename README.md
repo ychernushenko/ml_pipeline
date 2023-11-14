@@ -9,21 +9,27 @@ pip install -r requirements.txt
 - curl https://surfdrive.surf.nl/files/index.php/s/LDwpIdG7HHkQiOs/download --output dataset.zip  
 - unzip dataset.zip  
 
+# Run tests  
+Only several tests are provided  
+```
+pytest ./tests/unit_tests.py
+```
+
 # Run  
 ```
 python ./src/ml_pipeline.py --data_root_dir './dataset'
 ```
 expected output:  
 ```
-Accuracy: 0.98
+Accuracy: 0.99
 
 Classification Report:
               precision    recall  f1-score   support
 
-     Jewelry       0.99      0.98      0.98       161
-     Kitchen       0.98      0.99      0.98       163
+     Jewelry       0.99      0.99      0.99       162
+     Kitchen       0.99      0.99      0.99       189
 
-    accuracy                           0.98       324
-   macro avg       0.98      0.98      0.98       324
-weighted avg       0.98      0.98      0.98       324
+    accuracy                           0.99       351
+   macro avg       0.99      0.99      0.99       351
+weighted avg       0.99      0.99      0.99       351
 ```

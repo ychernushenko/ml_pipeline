@@ -23,7 +23,7 @@ def correct_labels_spelling(products_df, label_col_name, mapping=None):
     Correct misspelled labels according to 'mapping'.
     """
     for typo, correct_name in mapping.items():
-        products_df.loc[products_df[label_col_name] == typo] = correct_name
+        products_df[label_col_name][products_df[label_col_name] == typo] = correct_name
 
 def preprocess_data(data_root_dir):
     """
